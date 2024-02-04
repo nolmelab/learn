@@ -1,0 +1,71 @@
+\chapter{무엇을 연습하나요?}
+
+C++ 표준 라이브러리는 C++ 컴파일러들과 함께 배포되고 있고, 이들 라이브러리 개발자들은 
+최고 수준의 C++ 프로그래머들입니다. 따라서, 제공되는 인터페이스와 설명 문서로 잘 
+사용하는 연습을 통해 여러 곳에서 활용할 수 있을뿐만 아니라 C++ 언어에 대한 이해를 
+높이는데 매우 효과적입니다. 
+
+다양한 라이브러리 구성 요소들이 있습니다. 그 중에서 가장 많이 사용하는 컨테이너 자료구조와 
+알고리즘을 어떻게 쓰는지 배우는 것에서 시작합니다. 필요한 라이브러리 사용법들을 추가로 
+좀 더 살펴보고 연습한 후에 코드를 읽는 연습을 합니다. 
+
+좀 익숙해지면 빅오(Big O) 기호라고 불리는 알고리즘의 성능 특성을 실제 사용 코드와 
+프로파일링을 통해 확인합니다. 그 다음은 C++이 어떻게 얼마나 최적화를 잘 하는지 
+어셈블리 코드를 읽으면서 확인합니다. 
+
+\section{C++ 표준 라이브러리}
+
+이해하고 연습할 라이브러리 목록은 다음과 같습니다. 
+
+\begin{itemize}
+    \item container 라이브러리 : 여러 자료 구조를 사용할 수 있습니다. 
+    \begin{itemize}
+        \item std::array 
+        \item std::vector 
+        \item std::map
+        \item std::unordered\_map 
+        \item std::set 
+        \item iterator
+    \end{itemize}
+    \item input/output 라이브러리 :  파일과 콘솔 입출력을 압니다. 
+    \begin{itemize}
+        \item fstream 
+        \item iostream 
+        \item filesystem
+    \end{itemize}
+    \item thread 라이브러리 : 쓰레드와 락을 다룰 수 있습니다. 
+    \begin{itemize}
+        \item atomic 
+        \item thread
+        \item mutex
+        \item condition\_variable
+        \item future 
+    \end{itemize}
+    \item 메모리 : 메모리 관리와 공유 포인터를 이해합니다. 
+    \begin{itemize}
+        \item memory 
+        \item new 
+        \item scoped\_allocator
+    \end{itemize}
+\end{itemize}
+
+\section{중요한 추가 라이브러리}
+
+tbb의 중요한 자료구조입니다. 
+
+\begin{itemize}
+    \item concurrent\_queue
+    \item concurrent\_map 
+\end{itemize}
+
+메모리 관리 라이브러리들도 중요합니다. 
+
+\begin{itemize}
+    \item tcmalloc 
+    \item mimalloc
+\end{itemize}
+
+
+
+
+

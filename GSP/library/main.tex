@@ -1,30 +1,38 @@
-\documentclass[fontsize=12pt, paper=a4, pagesize=auto]{book} 
-\usepackage[utf8]{inputenc}
-\usepackage{fancyhdr}
-\usepackage[
-paperheight=30cm, paperwidth=18cm,% Set the height and width of the paper
-includehead,
-nomarginpar,% We don't want any margin paragraphs
-textwidth=18cm,% Set \textwidth to 10cm
-headheight=10mm,% Set \headheight to 10mm
-]{geometry}
+\documentclass{book}
+\usepackage{kotex}
+\setmainhangulfont{NanumBarunGothic}
+\usepackage{setspace}
+\onehalfspacing
 
-\pagestyle{fancy}
+\usepackage{indentfirst}
+\setlength{\parindent}{1mm} % 들여쓰기 길이 설정
+\setlength{\parskip}{2mm} % 문단 간의 간격 조절
+
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
 
 \begin{document}
 
-    \chapter{test}
+\title{게임 서버 프로그래밍 - 라이브러리 연습}
+\author{지산}
+\maketitle
+\tableofcontents
 
-    \section{test}
+\part{시작하면서}
+\include{intro/chap1}
+\include{intro/chap2}
 
-    Converter from LaTeX to ebook formats
+\part{기반 라이브러리}
+\include{part1/chap1}
 
-    This is a bundle of Lua scripts and LaTeX packages for conversion of LaTeX files to 
-    ebook formats such as epub, mobi and epub3. tex4ht is used as the conversion engine.
-    
-    Browse files
-    Back to package list
+\part{통신}
+\include{part2/chap1}
 
-    \section{test2}
+\part{게임 데이터와 데이터베이스}
+\include{part3/chap1}
+
+\part{서비스}
+\include{part4/chap1}
+
+
 
 \end{document}
