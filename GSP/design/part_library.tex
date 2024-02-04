@@ -1,0 +1,116 @@
+\chapter{연습 준비}
+
+연습을 위한 준비와 연습을 위한 방법을 정리한다. 
+
+\begin{itemize}
+    \item ide 준비하기 
+    \item vcpkg
+    \item doctest 사용법
+    \item 디버깅 
+    \item 코드 읽기 
+\end{itemize}
+
+ide는 visual studo와 visual c++로 한다. 일반적으로 쉽게 접근 가능하므로 이를 기준으로 
+하고 vscode + cmake + clang은 가볍게 언급한다. 이 쪽으로 진행하는 사람도 있을 수 있다. 
+
+doctest는 단위 테스트로 기능을 꼼꼼하게 살펴서 연습하는 방법으로 설명한다. 
+단위 테스트와 assert에 해당하는 CHECK로 연습하게 한다. TDD를 가볍게 언급하고 현실적으로 
+적용 가능한 수준에 대해 정리한다. 
+
+\chapter{라이브러리 목록}
+
+게임 서버 개발에 필수적인 라이브러리들로 이미 사용했거나 사용할 것들을 
+정리하고 연습으로 만든다. 
+
+\section{표준 라이브러리}
+
+\begin{itemize}
+    \item container 
+    \item string 
+    \item memory 
+    \item file 
+    \item thread 
+    \item lock
+    \item atomic
+    \item chrono 
+    \item regex 
+\end{itemize}
+
+\section{boost와 신규 라이브러리}
+std에 없는 것들을 언급할 필요가 있다. 찾아서 연습할 수 있도록 한다. 
+
+\begin{itemize}
+    \item boost multi\_index 
+    \item redis skiplist
+\end{itemize}
+
+\section{tbb}
+
+이외에 tbb에 있는 컨테이너들도 중요하고 유용하다. 
+
+\begin{itemize}
+    \item concurrent\_queue, concurrent\_map 
+\end{itemize}
+
+
+\section{메모리 관리}
+
+메모리 관리 라이브러리들도 중요하다. 
+
+\begin{itemize}
+    \item tcmalloc 
+    \item mimalloc
+\end{itemize}
+
+\section{통신}
+
+통신과 관련한 기본 라이브러리들이다. 
+
+\begin{itemize}
+    \item asio 
+    \item cpr 
+    \item sodium 
+    \item crypto++
+    \item flatbuferrs
+\end{itemize}
+
+\section{데이터 관리}
+
+데이터 관리를 위한 라이브러리이다. 
+
+\begin{itemize}
+    \item RapidCsv
+    \item nlohmann json 
+    \item nanodbc
+    \item redis 
+\end{itemize}
+
+
+\section{공간과 물리 처리}
+
+공간과 물리 처리를 위한 라이브러리이다. 
+
+\begin{itemize}
+    \item recastdetour 
+    \item bulletphysics
+    \item box2d
+\end{itemize}
+
+
+\section{메트릭}
+
+메트릭 라이브러리들이다. 
+
+\begin{itemize}
+    \item prometheus 
+    \item grafana 
+    \item exporter 들
+\end{itemize}
+
+\section{툴 개발}
+
+툴 개발을 위해 필요한 라이브러리이다. 
+
+\begin{itemize}
+    \item imgui
+\end{itemize}

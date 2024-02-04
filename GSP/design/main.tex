@@ -1,0 +1,45 @@
+\documentclass[11pt]{book}
+\usepackage{kotex}
+\setmainhangulfont{NanumBarunGothic}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1mm} % 들여쓰기 길이 설정
+\setlength{\parskip}{2mm} % 문단 간의 간격 조절
+
+% 목차가 항상 나오도록 하고, 파란색으로 한다. 
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
+
+\begin{document}
+
+\title{게임 서버 프로그래밍 책 설계}
+\author{지산}
+\maketitle
+\tableofcontents
+
+\part{글쓰기}
+\include{part_writing}
+
+\part{내용}
+\include{part_contents}
+
+\part{라이브러리}
+\include{part_library}
+
+\part{아키텍처}
+\include{part_architecture}
+
+\part{데이터베이스}
+\include{part_database}
+
+\part{부하 테스트}
+\include{part_load_test}
+
+\part{게임 데이터}
+\include{part_game_data}
+
+\part{게임 시스템}
+\include{part_game_system}
+
+\end{document}
