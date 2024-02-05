@@ -1,0 +1,82 @@
+\chapter{container 라이브러리}
+
+\section{솔루션 준비}
+
+\subsection{프로젝트 생성}
+
+gsp\_library C++ 콘솔 프로젝트를 만듭니다. 해당 폴더의 파일들을 적절하게 정리합니다. 
+
+저는 gsp\_library 솔루션과 프로젝트를 만들었습니다. gsp\_library.cpp 파일의 
+main을 doctest에서 제공하는 main의 내용으로 교체합니다. 
+
+내용은 다음과 같습니다. 
+
+\begin{lstlisting}[language=c++, caption={doctest main 내용}]
+    #define DOCTEST_CONFIG_IMPLEMENT
+    #include <doctest/doctest.h>
+    
+    int main(int argc, char** argv) 
+    {
+      doctest::Context context;
+    
+      // exclude test cases with "math" in their name
+      context.addFilter("test-case-exclude", "*math*"); 
+
+      // stop test execution after 5 failed assertions
+      context.setOption("abort-after", 5);              
+
+      // sort the test cases by their name
+      context.setOption("order-by", "name");  
+    
+      context.applyCommandLine(argc, argv);
+    
+      // overrides
+      // don't break in the debugger when assertions fail
+      // context.setOption("no-breaks", true);             
+    
+      int res = context.run(); // run
+
+      // important - query flags (and --exit) rely on the user doing this
+      if (context.shouldExit()) 
+        return res;          // propagate the result of the tests
+    
+      int client_stuff_return_code = 0;
+
+      // the result from doctest is propagated here as well
+      return res + client_stuff_return_code; 
+    }
+\end{lstlisting}
+
+\subsection{추가 설정}
+
+프로젝트 속성의 vcpkg 항목에 Use Vcpkg, Use Static Libraries가 모두 예(Yes)로 설정되었느지 
+확인해야 합니다. 또 C++ \textrightarrow 코드 생성에 DLL이 아닌 멀티쓰레드로 설정되었는지 
+디버그와 릴리스 구성 모두 확인합니다. 왜냐하면 정적 라이브러리로 vcpkg에 설치하기 
+때문입니다. 
+
+빌드하고 실행해서 정상으로 동작하는지 확인합니다. 
+
+\includegraphics[scale=0.7]{build_execute}
+
+\section{std::array}
+
+컨테이너들을 연습할 폴더 container를 만들고 폴더 안에 learn\_array.cpp 파일을 
+추가하고 gsp\_library 프로젝트에 적절한 필터를 추가해서 넣습니다. 필터 명으로는 
+폴더와 같은 container도 괜찮을 듯 합니다. 
+
+\begin{lstlisting}[language=c++, caption={시작 골격}]
+#include <doctest/doctest.h>
+
+#include <array>
+
+TEST_CASE("std::array")
+{
+  SUBCASE("basic interface")
+  {
+
+  }
+}
+\end{lstlisting}
+
+
+

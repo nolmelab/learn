@@ -4,11 +4,30 @@
 \usepackage{setspace}
 \onehalfspacing
 
+\usepackage[top=2cm, bottom=2cm, outer=2.5cm, inner=2.5cm, headsep=14pt]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
 \usepackage{indentfirst}
-\setlength{\parindent}{1mm} % 들여쓰기 길이 설정
+\setlength{\parindent}{0mm} % 들여쓰기 길이 설정
 \setlength{\parskip}{2mm} % 문단 간의 간격 조절
 
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
+
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+\definecolor{mintbg}{rgb}{.63,.79,.95}
+\colorlet{lightmintbg}{mintbg!40}
+\lstset{backgroundcolor=\color{lightmintbg}}
+
+\usepackage{graphicx}
+\graphicspath{{image/}{../image/}}
 
 \begin{document}
 
@@ -23,6 +42,7 @@
 
 \part{기반 라이브러리}
 \include{part1/chap1}
+\include{part1/chap2}
 
 \part{통신}
 \include{part2/chap1}

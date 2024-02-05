@@ -1,0 +1,11 @@
+*.tlog
+*.exp
+*.ilk
+*.obj
+*.db
+Browse.*
+*.ipch
+*.recipe
+*.idb
+*.pdb
+.suo
