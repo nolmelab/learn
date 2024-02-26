@@ -60,6 +60,10 @@ main을 doctest에서 제공하는 main의 내용으로 교체합니다.
 
 \section{std::array}
 
+고정길이 배열입니다. 템플릿으로 임의의 타잎의 오브젝트를 보관할 수 있습니다. 
+
+\subsection{테스트 파일 만들기}
+
 컨테이너들을 연습할 폴더 container를 만들고 폴더 안에 learn\_array.cpp 파일을 
 추가하고 gsp\_library 프로젝트에 적절한 필터를 추가해서 넣습니다. 필터 명으로는 
 폴더와 같은 container도 괜찮을 듯 합니다. 
@@ -78,5 +82,31 @@ TEST_CASE("std::array")
 }
 \end{lstlisting}
 
+\subsection{자료 읽기}
+
+cppreference.com의 std::array 문서를 살펴봅니다. 
+
+\begin{lstlisting}[language=c++, caption={타잎}]
+  template<
+    class T,
+    std::size_t N
+> struct array;
+\end{lstlisting}
+
+타잎 T와 크기 N을 받는 struct로 되어 있습니다. 
+
+\begin{tcolorbox}
+  std::array is a container that encapsulates fixed size arrays
+\end{tcolorbox}
+
+첫 문장이고 가장 중요한 내용입니다. 
+
+그 이후에 이어지는 내용은 대체로 언어의 세밀한 정의와 관련된 부분이 나옵니다. 
+처음 볼 때는 읽지 않아도 괜찮습니다. 
+
+
+
+
+\subsection{코드 읽기}
 
 
